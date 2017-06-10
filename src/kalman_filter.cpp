@@ -19,7 +19,6 @@ void KalmanFilter::Init(VectorXd &x_in, MatrixXd &P_in, MatrixXd &F_in,
 
 void KalmanFilter::Predict() {
     /**
-    TODO:
       * predict the state
     */
     x_ = F_ * x_;
@@ -28,7 +27,6 @@ void KalmanFilter::Predict() {
 
 void KalmanFilter::Update(const VectorXd &z) {
     /**
-    TODO:
       * update the state by using Kalman Filter equations
     */
     VectorXd y = z - H_ * x_;
@@ -44,7 +42,6 @@ void KalmanFilter::Update(const VectorXd &z) {
 
 void KalmanFilter::UpdateEKF(const VectorXd &z) {
     /**
-    TODO:
       * update the state by using Extended Kalman Filter equations
     */
     const double &px = x_(0);
